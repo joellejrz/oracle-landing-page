@@ -1,5 +1,41 @@
 /* Resources page styles */
 
+/* ============ LIGHT THEME OVERRIDES ============
+   Inherits nav / footer / particles overrides from
+   body.blog-light in blog.css.  Only resources-specific
+   elements are re-skinned here.
+   ================================================ */
+
+body.blog-light .resource-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(179, 77, 41, 0.18);
+}
+
+body.blog-light .resource-card:hover .resource-card-body h3 {
+  color: #B34D29;
+}
+
+body.blog-light .resource-author {
+  color: #B34D29;
+}
+
+body.blog-light .resource-link {
+  color: #B34D29;
+}
+
+body.blog-light .affiliate-disclosure {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+body.blog-light .affiliate-disclosure strong {
+  color: #1A1A1A;
+}
+
+body.blog-light .resources-cta-inner::before {
+  background: radial-gradient(ellipse at center, rgba(179, 77, 41, 0.05), transparent 70%);
+}
+
+/* ============================================== */
+
 .resources-container {
   max-width: 960px;
   margin: 0 auto;
