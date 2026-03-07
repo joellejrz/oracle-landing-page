@@ -3,8 +3,12 @@ const path = require('path');
 const matter = require('gray-matter');
 const { marked } = require('marked');
 
+const BASE_URL = 'https://oraclethejournal.com';
+const SITE_NAME = 'Oracle The Journal';
 const POSTS_DIR = path.join(__dirname, 'content', 'posts');
 const BLOG_DIR = path.join(__dirname, 'blog');
+const ROBOTS_PATH = path.join(__dirname, 'robots.txt');
+const SITEMAP_PATH = path.join(__dirname, 'sitemap.xml');
 
 marked.setOptions({
   gfm: true,
@@ -18,6 +22,52 @@ function formatDate(dateStr) {
 
 function slugFromFilename(filename) {
   return filename.replace(/\.md$/, '');
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function absoluteUrl(pathname = '/') {
+  return new URL(pathname, `${BASE_URL}/`).toString();
+}
+
+function toIsoDate(dateStr) {
+  return new Date(dateStr).toISOString();
+}
+
+function buildMetaTags({
+  title,
+  description,
+  pathname,
+  type = 'website',
+  twitterCard = 'summary_large_image',
+}) {
+  const canonical = absoluteUrl(pathname);
+  return `
+  <meta name="description" content="${escapeHtml(description)}">
+  <link rel="canonical" href="${canonical}">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:site_name" content="${SITE_NAME}">
+  <meta property="og:title" content="${escapeHtml(title)}">
+  <meta property="og:description" content="${escapeHtml(description)}">
+  <meta property="og:type" content="${type}">
+  <meta property="og:url" content="${canonical}">
+  <meta property="og:image" content="${absoluteUrl('/assets/logo.png')}">
+  <meta name="twitter:card" content="${twitterCard}">
+  <meta name="twitter:title" content="${escapeHtml(title)}">
+  <meta name="twitter:description" content="${escapeHtml(description)}">
+  <meta name="twitter:image" content="${absoluteUrl('/assets/logo.png')}">`;
+}
+
+function renderSchema(schema) {
+  return `
+  <script type="application/ld+json">${JSON.stringify(schema)}</script>`;
 }
 
 function readAllPosts() {
@@ -43,6 +93,30 @@ function postTemplate(post, allPosts) {
   const related = allPosts
     .filter(p => p.slug !== post.slug && p.category === post.category)
     .slice(0, 2);
+  const pageTitle = `${post.title} — Oracle Blog`;
+  const canonicalPath = `/blog/${post.slug}/`;
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.description,
+    datePublished: toIsoDate(post.date),
+    dateModified: toIsoDate(post.date),
+    author: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      logo: {
+        '@type': 'ImageObject',
+        url: absoluteUrl('/assets/logo.png'),
+      },
+    },
+    mainEntityOfPage: absoluteUrl(canonicalPath),
+    articleSection: post.category,
+  };
 
   const relatedHTML = related.length > 0 ? `
       <section class="blog-related">
@@ -62,11 +136,12 @@ function postTemplate(post, allPosts) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${post.title} — Oracle Blog</title>
-  <meta name="description" content="${post.description}">
-  <meta property="og:title" content="${post.title}">
-  <meta property="og:description" content="${post.description}">
-  <meta property="og:type" content="article">
+  <title>${escapeHtml(pageTitle)}</title>${buildMetaTags({
+    title: pageTitle,
+    description: post.description,
+    pathname: canonicalPath,
+    type: 'article',
+  })}${renderSchema(articleSchema)}
   <link rel="icon" href="/assets/logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -170,6 +245,23 @@ function postTemplate(post, allPosts) {
 
 function indexTemplate(posts) {
   const categories = ['All', ...new Set(posts.map(p => p.category))];
+  const pageTitle = 'Blog — Oracle The Journal';
+  const description = 'Insights on shadow work, dream interpretation, Jungian psychology, and building a private AI journal. By Oracle.';
+  const blogSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: `${SITE_NAME} Blog`,
+    description,
+    url: absoluteUrl('/blog/'),
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      logo: {
+        '@type': 'ImageObject',
+        url: absoluteUrl('/assets/logo.png'),
+      },
+    },
+  };
 
   const categoryPills = categories.map(cat =>
     `<button class="blog-filter-pill${cat === 'All' ? ' active' : ''}" data-category="${cat}">${cat}</button>`
@@ -193,8 +285,11 @@ function indexTemplate(posts) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog — Oracle The Journal</title>
-  <meta name="description" content="Insights on shadow work, dream interpretation, Jungian psychology, and building a private AI journal. By Oracle.">
+  <title>${pageTitle}</title>${buildMetaTags({
+    title: pageTitle,
+    description,
+    pathname: '/blog/',
+  })}${renderSchema(blogSchema)}
   <link rel="icon" href="/assets/logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -288,6 +383,45 @@ function indexTemplate(posts) {
 </html>`;
 }
 
+function generateRobots() {
+  return `User-agent: *
+Allow: /
+
+Sitemap: ${absoluteUrl('/sitemap.xml')}
+`;
+}
+
+function generateSitemap(posts) {
+  const staticPages = [
+    { loc: absoluteUrl('/'), lastmod: new Date().toISOString() },
+    { loc: absoluteUrl('/blog/'), lastmod: new Date().toISOString() },
+    { loc: absoluteUrl('/resources.html'), lastmod: new Date().toISOString() },
+    { loc: absoluteUrl('/privacy.html'), lastmod: new Date().toISOString() },
+    { loc: absoluteUrl('/terms.html'), lastmod: new Date().toISOString() },
+    { loc: absoluteUrl('/encryption.html'), lastmod: new Date().toISOString() },
+  ];
+
+  const postPages = posts.map((post) => ({
+    loc: absoluteUrl(`/blog/${post.slug}/`),
+    lastmod: toIsoDate(post.date),
+  }));
+
+  const urls = [...staticPages, ...postPages]
+    .map(
+      ({ loc, lastmod }) => `  <url>
+    <loc>${loc}</loc>
+    <lastmod>${lastmod}</lastmod>
+  </url>`
+    )
+    .join('\n');
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls}
+</urlset>
+`;
+}
+
 // Build
 console.log('Building blog...');
 const posts = readAllPosts();
@@ -309,5 +443,11 @@ posts.forEach(post => {
 // Generate index page
 fs.writeFileSync(path.join(BLOG_DIR, 'index.html'), indexTemplate(posts));
 console.log('  -> blog/index.html');
+
+// Generate technical SEO files
+fs.writeFileSync(ROBOTS_PATH, generateRobots());
+console.log('  -> robots.txt');
+fs.writeFileSync(SITEMAP_PATH, generateSitemap(posts));
+console.log('  -> sitemap.xml');
 
 console.log('Blog build complete!');
