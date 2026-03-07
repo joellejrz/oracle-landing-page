@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Oracle The Journal</title>
+  <meta name="description" content="Oracle's privacy policy. We collect zero personal data. Your journal entries never leave your device.">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="legal.css">
+</head>
+<body>
+  <canvas id="particles"></canvas>
+
+  <nav class="nav scrolled">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">
+        <img src="assets/logo.png" alt="Oracle" class="nav-logo">
+        <span class="nav-name">Oracle</span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="https://app.oraclethejournal.com" class="btn btn-sm" target="_blank" rel="noopener">Open App</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="/">Home</a>
+    <a href="https://app.oraclethejournal.com" class="btn" target="_blank" rel="noopener">Open App</a>
+  </div>
+
+  <main class="legal-page">
+    <div class="legal-container">
+      <h1>Privacy Policy</h1>
+      <p class="legal-meta">Last updated: March 7, 2026</p>
+
+      <div class="legal-highlight">
+        <p><strong>The short version:</strong> We don't collect, store, or have access to your journal entries. Ever. Your data is encrypted on your device with a key only you control. We literally cannot read your entries even if compelled to.</p>
+      </div>
+
+      <h2>1. Our Philosophy</h2>
+      <p>Oracle The Journal ("Oracle," "we," "us," or "our") is built on a radical premise: your private thoughts belong to you alone. This isn't just a policy — it's enforced by our architecture. We use local-first encryption so that even we are technically incapable of accessing your data.</p>
+
+      <h2>2. What We Do NOT Collect</h2>
+      <ul>
+        <li><strong>Journal entries</strong> — never transmitted, never stored on our servers</li>
+        <li><strong>Dream diary entries</strong> — encrypted and stored only on your device</li>
+        <li><strong>AI conversations</strong> — processed entirely on your device via Llama 3.2</li>
+        <li><strong>Your encryption key or Master Password</strong> — derived locally, never transmitted</li>
+        <li><strong>IP addresses</strong> — Cloudflare Workers never expose client IPs to our code</li>
+        <li><strong>Browsing behavior, analytics, or tracking data</strong> — we use zero analytics tools, zero tracking pixels, zero cookies for advertising</li>
+      </ul>
+
+      <h2>3. What We Do Collect (Anonymous Archetype Data)</h2>
+      <p>If you opt in to the "State of the Soul" collective feature, Oracle generates an <strong>Anonymous Archetype Profile</strong> on your device. This profile is:</p>
+      <ul>
+        <li><strong>Generalized</strong> — specific details (age, location) are converted to broad categories (e.g., "30–35," "Europe")</li>
+        <li><strong>Noise-injected</strong> — Differential Privacy algorithms add mathematical noise so individual contributions have plausible deniability</li>
+        <li><strong>K-Anonymous</strong> — no data point is stored unless at least 5 people share that same category (the "Rule of 5")</li>
+      </ul>
+      <p>This anonymous profile contains <strong>no raw text, no user identifiers, no IP addresses, and no encryption keys</strong>. It is transmitted over TLS 1.3 to a Cloudflare Worker that has no access to the sender's IP address by default.</p>
+
+      <h2>4. How Your Data Is Protected</h2>
+      <h3>Local Encryption</h3>
+      <p>All journal entries are encrypted using <strong>AES-256-GCM</strong> and stored in your browser's IndexedDB. The encryption key is derived from your Master Password using a key derivation function on your device. The key never leaves your device.</p>
+
+      <h3>Local AI Processing</h3>
+      <p>The Higher Self AI runs entirely on your machine using Ollama and Llama 3.2 (3B). Your entries are processed in local memory only. No data is sent to any external AI service (not OpenAI, not Google, not anyone).</p>
+
+      <h3>Infrastructure</h3>
+      <p>Our backend runs exclusively on Cloudflare's edge network:</p>
+      <ul>
+        <li><strong>Cloudflare Pages</strong> — hosts the frontend (static files only)</li>
+        <li><strong>Cloudflare Workers</strong> — serverless functions that never see client IP addresses</li>
+        <li><strong>Cloudflare D1</strong> — stores only anonymized, aggregated archetype data</li>
+      </ul>
+      <p>There are no traditional servers, no AWS, no Azure, no third-party databases.</p>
+
+      <h2>5. Authentication</h2>
+      <p>If you sign in with Google, we receive only your email address for account identification. Your email is never linked to your journal entries or archetype data. Google does not have access to any Oracle data.</p>
+
+      <h2>6. Third-Party Services</h2>
+      <p>Oracle uses the following third-party services:</p>
+      <ul>
+        <li><strong>Cloudflare</strong> — hosting and edge compute (no data shared beyond anonymous archetype profiles)</li>
+        <li><strong>Google Sign-In</strong> — authentication only (optional)</li>
+      </ul>
+      <p>We do not use any analytics platforms, advertising networks, data brokers, or customer tracking tools.</p>
+
+      <h2>7. Data Retention</h2>
+      <ul>
+        <li><strong>Journal entries:</strong> Stored on your device indefinitely until you delete them. We have no copy.</li>
+        <li><strong>Anonymous archetype data:</strong> Retained in Cloudflare D1 for aggregate analysis. Cannot be linked to you.</li>
+        <li><strong>Account data:</strong> Email address retained for authentication. You can delete your account at any time.</li>
+      </ul>
+
+      <h2>8. Your Rights</h2>
+      <p>Because your data lives on your device, you have complete control:</p>
+      <ul>
+        <li><strong>Access:</strong> Your data is on your device — you already have it</li>
+        <li><strong>Delete:</strong> Clear your browser storage or delete within the app at any time</li>
+        <li><strong>Portability:</strong> Export your entries from the local vault</li>
+        <li><strong>Opt out:</strong> You can disable the anonymous collective feature at any time</li>
+      </ul>
+      <p>For GDPR, CCPA, and similar regulations: because we don't possess your personal data on our servers, most data subject requests are already fulfilled by design.</p>
+
+      <h2>9. Children's Privacy</h2>
+      <p>Oracle is not intended for use by individuals under the age of 16. We do not knowingly collect data from children.</p>
+
+      <h2>10. Changes to This Policy</h2>
+      <p>We will update this page if our practices change. Because our architecture makes data collection technically impossible, material changes are unlikely. The "last updated" date at the top reflects the most recent revision.</p>
+
+      <h2>11. Open Source Verification</h2>
+      <p>Don't take our word for it. Oracle is open source. You can audit our code, verify our encryption implementation, and confirm that no data leaves your device:</p>
+      <p><a href="https://github.com/joellejrz/oracle-journal" target="_blank" rel="noopener">github.com/joellejrz/oracle-journal</a></p>
+
+      <h2>12. Contact</h2>
+      <p>Questions about this policy? Reach us at <a href="mailto:privacy@oraclethejournal.com">privacy@oraclethejournal.com</a></p>
+
+      <div class="legal-nav">
+        <a href="terms.html">Terms of Service</a>
+        <a href="encryption.html">How Encryption Works</a>
+        <a href="/">Back to Home</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="section-container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Oracle The Journal. All rights reserved.</p>
+        <p class="footer-privacy-note">We collect zero personal data. <a href="encryption.html">Verify our claims.</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
