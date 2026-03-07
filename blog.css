@@ -2,6 +2,128 @@
    ORACLE BLOG STYLES
    ============================ */
 
+/* ============ BLOG — LIGHT THEME ============
+   Scoped entirely to body.blog-light so no other
+   page is affected. Contrast ratios verified:
+     #1A1A1A / #F5F5F3 → 15.94:1  ✓ (text-primary)
+     #4A4A4A / #F5F5F3 →  8.12:1  ✓ (text-secondary)
+     #5E5E5E / #F5F5F3 →  5.98:1  ✓ (text-muted)
+     #B34D29 / #F5F5F3 →  4.80:1  ✓ (link / accent text)
+   ============================================ */
+
+body.blog-light {
+  --bg-primary:     #F5F5F3;
+  --bg-secondary:   #EFEFED;
+  --bg-card:        rgba(0, 0, 0, 0.035);
+  --bg-card-hover:  rgba(0, 0, 0, 0.065);
+  --border-subtle:  rgba(0, 0, 0, 0.09);
+  --border-glow:    rgba(179, 77, 41, 0.22);
+  --text-primary:   #1A1A1A;
+  --text-secondary: #4A4A4A;
+  --text-muted:     #5E5E5E;
+  background: #F5F5F3;
+  color: #1A1A1A;
+}
+
+/* Particle canvas — visually wrong on light backgrounds */
+body.blog-light #particles { display: none; }
+
+/* Cursor glow — not needed on light bg */
+body.blog-light .cursor-glow { display: none; }
+
+/* ---- Nav ---- */
+body.blog-light .nav.scrolled {
+  background: rgba(245, 245, 243, 0.93);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
+}
+
+body.blog-light .nav-name { color: #1A1A1A; }
+body.blog-light .nav-links a { color: #4A4A4A; }
+body.blog-light .nav-links a:hover,
+body.blog-light .nav-links .nav-active { color: #1A1A1A; }
+body.blog-light .nav-toggle span { background: #1A1A1A; }
+
+/* ---- Mobile menu ---- */
+body.blog-light .mobile-menu {
+  background: rgba(245, 245, 243, 0.98);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+body.blog-light .mobile-menu a { color: #1A1A1A; }
+body.blog-light .mobile-menu a:hover { color: #B34D29; }
+
+/* ---- Filter pills ---- */
+body.blog-light .blog-filter-pill:hover {
+  border-color: rgba(0, 0, 0, 0.2);
+  color: #1A1A1A;
+}
+body.blog-light .blog-filter-pill.active { color: #fff; }
+
+/* ---- Post cards ---- */
+body.blog-light .blog-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(179, 77, 41, 0.18);
+}
+body.blog-light .blog-card:hover h3 { color: #B34D29; }
+
+/* ---- Related cards ---- */
+body.blog-light .blog-related-card:hover {
+  border-color: rgba(179, 77, 41, 0.25);
+}
+
+/* ---- Back link ---- */
+body.blog-light .blog-back-link { color: #5E5E5E; }
+body.blog-light .blog-back-link:hover { color: #1A1A1A; }
+
+/* ---- Article body ---- */
+body.blog-light .blog-article-body a {
+  color: #B34D29;
+  text-decoration-color: rgba(179, 77, 41, 0.35);
+}
+body.blog-light .blog-article-body a:hover {
+  text-decoration-color: #B34D29;
+}
+body.blog-light .blog-article-body em { color: #B34D29; }
+body.blog-light .blog-article-body blockquote {
+  background: rgba(179, 77, 41, 0.05);
+}
+
+/* ---- Inline code & blocks ---- */
+body.blog-light .blog-article-body code {
+  background: rgba(0, 0, 0, 0.06);
+  color: #B34D29;
+}
+body.blog-light .blog-article-body pre {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+body.blog-light .blog-article-body pre code {
+  background: none;
+  color: #1A1A1A;
+}
+
+/* ---- Affiliate notice ---- */
+body.blog-light .blog-affiliate-notice {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* ---- Newsletter input ---- */
+body.blog-light .blog-newsletter-input {
+  background: #fff;
+  color: #1A1A1A;
+  border-color: rgba(0, 0, 0, 0.14);
+}
+body.blog-light .blog-newsletter-input::placeholder { color: #888; }
+
+/* ---- Footer ---- */
+body.blog-light .footer {
+  background: #EFEFED;
+  border-top: 1px solid rgba(0, 0, 0, 0.09);
+}
+body.blog-light .footer p,
+body.blog-light .footer-privacy-note { color: #5E5E5E; }
+body.blog-light .footer a { color: #B34D29; }
+body.blog-light .footer a:hover { color: #1A1A1A; }
+
 /* ============ BLOG INDEX ============ */
 
 .blog-page {

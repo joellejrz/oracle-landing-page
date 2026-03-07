@@ -150,7 +150,7 @@ function postTemplate(post, allPosts) {
   <link rel="stylesheet" href="/legal.css">
   <link rel="stylesheet" href="/blog.css">
 </head>
-<body>
+<body class="blog-light">
   <canvas id="particles"></canvas>
 
   <nav class="nav scrolled">
@@ -297,7 +297,7 @@ function indexTemplate(posts) {
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/blog.css">
 </head>
-<body>
+<body class="blog-light">
   <canvas id="particles"></canvas>
 
   <nav class="nav scrolled">
