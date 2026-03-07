@@ -146,9 +146,9 @@ function postTemplate(post, allPosts) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/legal.css">
-  <link rel="stylesheet" href="/blog.css">
+  <link rel="stylesheet" href="/style.css?v=2">
+  <link rel="stylesheet" href="/legal.css?v=2">
+  <link rel="stylesheet" href="/blog.css?v=2">
 </head>
 <body class="blog-light">
   <canvas id="particles"></canvas>
@@ -238,7 +238,7 @@ function postTemplate(post, allPosts) {
     </div>
   </footer>
 
-  <script src="/script.js"></script>
+  <script src="/script.js?v=2"></script>
 </body>
 </html>`;
 }
@@ -294,8 +294,8 @@ function indexTemplate(posts) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/blog.css">
+  <link rel="stylesheet" href="/style.css?v=2">
+  <link rel="stylesheet" href="/blog.css?v=2">
 </head>
 <body class="blog-light">
   <canvas id="particles"></canvas>
@@ -366,7 +366,7 @@ function indexTemplate(posts) {
     </div>
   </footer>
 
-  <script src="/script.js"></script>
+  <script src="/script.js?v=2"></script>
   <script>
     document.querySelectorAll('.blog-filter-pill').forEach(pill => {
       pill.addEventListener('click', () => {
