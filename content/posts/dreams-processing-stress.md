@@ -47,7 +47,7 @@ Start tracking the *emotional tone* of your dreams, not just the plot. When you 
 - On a scale of 1–10, how intense was it?
 - Does this emotion show up in my waking life too?
 
-This is exactly what Oracle's Dream Diary is designed for — it lets you rate dream clarity and emotional tone with simple sliders, so you can track patterns over time without needing to write a full dream report every morning.
+This is exactly what Oreia's Dream Diary is designed for — it lets you rate dream clarity and emotional tone with simple sliders, so you can track patterns over time without needing to write a full dream report every morning.
 
 ## 3. Your Dreams Are Staging "Confrontations" You Avoid While Awake
 
@@ -92,4 +92,4 @@ The dream doesn't need to be loud when you're finally paying attention.
 
 ---
 
-*Oracle's Dream Diary lets you track clarity, emotional tone, and recurring symbols over time — all encrypted on your device, all completely private. Because what you dream is no one's business but yours. [Start tracking your dreams](https://app.oraclethejournal.com).*
+*Oreia's Dream Diary lets you track clarity, emotional tone, and recurring symbols over time — all encrypted on your device, all completely private. Because what you dream is no one's business but yours. [Start tracking your dreams](https://app.oreiathejournal.com).*

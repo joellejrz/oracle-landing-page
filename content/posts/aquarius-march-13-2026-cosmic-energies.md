@@ -60,7 +60,7 @@ You might cry at something that logically shouldn't affect you. You might feel s
 
 **Journal prompt**: "What feeling have I been explaining away instead of experiencing?"
 
-This is exactly the kind of pattern Oracle's Higher Self feature is designed to surface — it tracks recurring emotional themes across your entries and asks the follow-up questions you'd avoid asking yourself. Not to diagnose. To witness.
+This is exactly the kind of pattern Oreia's Higher Self feature is designed to surface — it tracks recurring emotional themes across your entries and asks the follow-up questions you'd avoid asking yourself. Not to diagnose. To witness.
 
 ### Spiritual: The Frequency Shift
 
@@ -106,7 +106,7 @@ The Saturn-Neptune conjunction asks: *what if the most revolutionary thing you c
 2. Ask: *Where does this quality live in me — unacknowledged?*
 3. Write a letter to that part of yourself. Not to fix it. To meet it.
 
-Oracle's shadow journaling mode walks you through this exact framework — guided prompts that surface the disowned parts without the overwhelm. It uses a three-column structure drawn from cognitive behavioral therapy, but oriented toward Jungian integration rather than symptom management. The goal isn't to eliminate the shadow. It's to stop letting it run the show from backstage.
+Oreia's shadow journaling mode walks you through this exact framework — guided prompts that surface the disowned parts without the overwhelm. It uses a three-column structure drawn from cognitive behavioral therapy, but oriented toward Jungian integration rather than symptom management. The goal isn't to eliminate the shadow. It's to stop letting it run the show from backstage.
 
 ## Rituals and Practices for March 13th
 
@@ -129,7 +129,7 @@ Venus sextile Pluto is the day's most precise aspect. Use it.
 - Ask: *What would change if I showed them the unfinished version?*
 - Ask: *What am I afraid they'd do? What am I afraid I'd feel?*
 
-Oracle's Dream Diary captures these kinds of liminal, not-yet-formed thoughts beautifully — you can write it out longform, let the AI ask questions to help you articulate what's barely conscious, or weave scattered fragments together into something coherent. Three capture methods for exactly this kind of in-between material.
+Oreia's Dream Diary captures these kinds of liminal, not-yet-formed thoughts beautifully — you can write it out longform, let the AI ask questions to help you articulate what's barely conscious, or weave scattered fragments together into something coherent. Three capture methods for exactly this kind of in-between material.
 
 **3. A Mercury Retrograde Values Inventory**
 
@@ -145,7 +145,7 @@ Mercury retrograde in your second house wants you to look at the receipts — li
 
 With Mars in Pisces and the Moon in your twelfth house, this is a day when the body knows things the mind hasn't caught up to. A body scan, breathwork, or even a slow walk without headphones can surface insight that journaling alone won't reach.
 
-Oracle includes guided body scans and breathing exercises specifically designed for moments like this — when the processing needs to happen below the neck. They're built into the app alongside your journal entries, so the intellectual and somatic work can live in the same space.
+Oreia includes guided body scans and breathing exercises specifically designed for moments like this — when the processing needs to happen below the neck. They're built into the app alongside your journal entries, so the intellectual and somatic work can live in the same space.
 
 ## The Individuation Invitation
 
@@ -177,8 +177,8 @@ Here's what I want you to hold today, Aquarius: the disorientation is the orient
 
 And real isn't polished. Real isn't the person who has all the answers at the dinner party. Real is the person who can sit with a question long enough to let it change them. That's the work of March 13th. That's the work of this entire Pluto transit. And honestly — it's the work of being alive.
 
-If you're serious about this work, you need a space that's genuinely private — not "we promise we won't look" private, but *mathematically* private. That's why Oracle uses AES-256 encryption with locally derived keys. Your entries never leave your device. Not because we're virtuous, but because real shadow work requires the certainty that no one is watching. Not us. Not advertisers. Not an algorithm deciding what to surface. Your unconscious won't speak honestly in a room with hidden cameras.
+If you're serious about this work, you need a space that's genuinely private — not "we promise we won't look" private, but *mathematically* private. That's why Oreia uses AES-256 encryption with locally derived keys. Your entries never leave your device. Not because we're virtuous, but because real shadow work requires the certainty that no one is watching. Not us. Not advertisers. Not an algorithm deciding what to surface. Your unconscious won't speak honestly in a room with hidden cameras.
 
 ---
 
-*Oracle's Dream Diary lets you track clarity, emotional tone, and recurring symbols over time — all encrypted on your device, all completely private. Because what you dream is no one's business but yours. [Start tracking your dreams](https://app.oraclethejournal.com).*
+*Oreia's Dream Diary lets you track clarity, emotional tone, and recurring symbols over time — all encrypted on your device, all completely private. Because what you dream is no one's business but yours. [Start tracking your dreams](https://app.oreiathejournal.com).*

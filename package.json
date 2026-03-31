@@ -1,8 +1,8 @@
 {
-  "name": "oracle-landing-page",
+  "name": "oreia-landing-page",
   "version": "1.0.0",
   "private": true,
-  "description": "Landing page and blog for Oracle — Your Private AI Journal",
+  "description": "Landing page and blog for Oreia — Your Private AI Journal",
   "scripts": {
     "build": "node build.js"
   },

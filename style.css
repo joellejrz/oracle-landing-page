@@ -1,6 +1,6 @@
 /* ============================
-   ORACLE LANDING PAGE
-   Dark theme, coral & gold accents
+   OREIA LANDING PAGE
+   Dark theme, purple & blue accents
    Space Grotesk + physics UX
    ============================ */
 
@@ -10,21 +10,21 @@
   --bg-card: rgba(255, 255, 255, 0.03);
   --bg-card-hover: rgba(255, 255, 255, 0.06);
   --border-subtle: rgba(255, 255, 255, 0.06);
-  --border-glow: rgba(212, 167, 106, 0.15);
+  --border-glow: rgba(167, 139, 250, 0.15);
 
   --text-primary: #f5f5f5;
   --text-secondary: #a0a0a0;
   --text-muted: #666666;
 
-  --coral: #e8835d;
-  --coral-light: #f0a080;
-  --gold: #d4a76a;
-  --gold-light: #e8c898;
+  --purple: #a78bfa;
+  --purple-light: #c4b5fd;
+  --blue: #7c9cf5;
+  --blue-light: #a8c4fa;
   --green: #4ade80;
 
-  --gradient-accent: linear-gradient(135deg, var(--coral) 0%, var(--gold) 100%);
-  --gradient-accent-soft: linear-gradient(135deg, rgba(232, 131, 93, 0.15) 0%, rgba(212, 167, 106, 0.15) 100%);
-  --gradient-cta: linear-gradient(135deg, var(--coral) 0%, var(--coral-light) 50%, var(--gold) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--purple) 0%, var(--blue) 100%);
+  --gradient-accent-soft: linear-gradient(135deg, rgba(167, 139, 250, 0.15) 0%, rgba(124, 156, 245, 0.15) 100%);
+  --gradient-cta: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 50%, var(--blue) 100%);
 
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-heading: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
@@ -63,7 +63,7 @@ body {
 }
 
 ::selection {
-  background: rgba(232, 131, 93, 0.3);
+  background: rgba(167, 139, 250, 0.3);
   color: var(--text-primary);
 }
 
@@ -88,7 +88,7 @@ body {
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(232, 131, 93, 0.04) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.04) 0%, transparent 70%);
   pointer-events: none;
   z-index: 1;
   transform: translate(-50%, -50%);
@@ -305,7 +305,7 @@ body {
   background: var(--gradient-cta);
   color: #0a0a0a;
   font-weight: 600;
-  box-shadow: 0 0 30px rgba(232, 131, 93, 0.2), 0 0 60px rgba(212, 167, 106, 0.1);
+  box-shadow: 0 0 30px rgba(167, 139, 250, 0.2), 0 0 60px rgba(124, 156, 245, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -325,7 +325,7 @@ body {
 
 .btn-primary:hover {
   transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 0 50px rgba(232, 131, 93, 0.4), 0 0 100px rgba(212, 167, 106, 0.2);
+  box-shadow: 0 0 50px rgba(167, 139, 250, 0.4), 0 0 100px rgba(124, 156, 245, 0.2);
 }
 
 .btn-primary:active {
@@ -473,7 +473,7 @@ body {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, var(--coral), var(--gold) 70%, transparent 100%);
+  background: radial-gradient(circle at 30% 30%, var(--purple), var(--blue) 70%, transparent 100%);
   opacity: 0.12;
   filter: blur(60px);
   animation: orb-breathe 6s ease-in-out infinite;
@@ -489,7 +489,7 @@ body {
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  border: 1px solid rgba(212, 167, 106, 0.12);
+  border: 1px solid rgba(124, 156, 245, 0.12);
   animation: ring-spin 25s linear infinite;
 }
 
@@ -501,21 +501,21 @@ body {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--gold);
-  box-shadow: 0 0 12px var(--gold), 0 0 24px rgba(212, 167, 106, 0.3);
+  background: var(--blue);
+  box-shadow: 0 0 12px var(--blue), 0 0 24px rgba(124, 156, 245, 0.3);
 }
 
 .orb-ring-2 {
   width: 360px;
   height: 360px;
-  border-color: rgba(232, 131, 93, 0.08);
+  border-color: rgba(167, 139, 250, 0.08);
   animation-duration: 35s;
   animation-direction: reverse;
 }
 
 .orb-ring-2::after {
-  background: var(--coral);
-  box-shadow: 0 0 12px var(--coral), 0 0 24px rgba(232, 131, 93, 0.3);
+  background: var(--purple);
+  box-shadow: 0 0 12px var(--purple), 0 0 24px rgba(167, 139, 250, 0.3);
 }
 
 @keyframes ring-spin {
@@ -528,7 +528,7 @@ body {
   height: 120px;
   object-fit: contain;
   animation: float 6s ease-in-out infinite;
-  filter: drop-shadow(0 0 30px rgba(212, 167, 106, 0.3));
+  filter: drop-shadow(0 0 30px rgba(124, 156, 245, 0.3));
   transition: transform 0.3s var(--spring);
 }
 
@@ -553,7 +553,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--coral);
+  color: var(--purple);
   margin-bottom: 16px;
 }
 
@@ -603,7 +603,7 @@ body {
 .use-case-card:hover {
   background: var(--bg-card-hover);
   border-color: var(--border-glow);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(212, 167, 106, 0.05);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(124, 156, 245, 0.05);
 }
 
 .use-case-kicker {
@@ -613,7 +613,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--coral);
+  color: var(--purple);
   margin-bottom: 16px;
 }
 
@@ -638,7 +638,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: var(--gold-light);
+  color: var(--blue-light);
   font-size: 0.85rem;
   font-weight: 500;
   transition: gap 0.3s var(--spring);
@@ -673,7 +673,7 @@ body {
 .value-card:hover {
   background: var(--bg-card-hover);
   border-color: var(--border-glow);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(212, 167, 106, 0.05);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(124, 156, 245, 0.05);
 }
 
 .value-icon {
@@ -685,7 +685,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
-  color: var(--coral);
+  color: var(--purple);
   transition: transform 0.5s var(--spring);
 }
 
@@ -753,7 +753,7 @@ body {
 }
 
 .showcase-screen:hover {
-  box-shadow: 0 35px 100px rgba(0, 0, 0, 0.5), 0 0 60px rgba(212, 167, 106, 0.06);
+  box-shadow: 0 35px 100px rgba(0, 0, 0, 0.5), 0 0 60px rgba(124, 156, 245, 0.06);
 }
 
 .showcase-screen img {
@@ -771,7 +771,7 @@ body {
   position: absolute;
   inset: 0;
   border-radius: var(--radius-xl);
-  box-shadow: inset 0 0 80px rgba(212, 167, 106, 0.06);
+  box-shadow: inset 0 0 80px rgba(124, 156, 245, 0.06);
   pointer-events: none;
 }
 
@@ -809,7 +809,7 @@ body {
 .feature-card:hover {
   background: var(--bg-card-hover);
   border-color: var(--border-glow);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 30px rgba(212, 167, 106, 0.04);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 30px rgba(124, 156, 245, 0.04);
 }
 
 .feature-icon {
@@ -821,7 +821,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  color: var(--gold);
+  color: var(--blue);
   transition: transform 0.5s var(--spring);
 }
 
@@ -949,8 +949,8 @@ body {
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
-  background: var(--gold);
-  box-shadow: 0 0 8px var(--gold-light);
+  background: var(--blue);
+  box-shadow: 0 0 8px var(--blue-light);
   animation: star-twinkle 3s ease-in-out infinite;
   animation-delay: var(--delay);
 }
@@ -982,7 +982,7 @@ body {
 }
 
 .collective-highlight {
-  color: var(--gold) !important;
+  color: var(--blue) !important;
   font-weight: 500;
   font-style: italic;
 }
@@ -1041,7 +1041,7 @@ body {
 }
 
 .manifesto-text em {
-  color: var(--coral-light);
+  color: var(--purple-light);
   font-style: italic;
 }
 
@@ -1167,7 +1167,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(232, 131, 93, 0.06), transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(167, 139, 250, 0.06), transparent 70%);
   pointer-events: none;
 }
 
@@ -1176,7 +1176,7 @@ body {
   height: 80px;
   object-fit: contain;
   margin-bottom: 28px;
-  filter: drop-shadow(0 0 20px rgba(212, 167, 106, 0.25));
+  filter: drop-shadow(0 0 20px rgba(124, 156, 245, 0.25));
   animation: float 6s ease-in-out infinite;
 }
 
@@ -1289,7 +1289,7 @@ body {
 }
 
 .footer-privacy-note a {
-  color: var(--coral);
+  color: var(--purple);
   text-decoration: none;
 }
 

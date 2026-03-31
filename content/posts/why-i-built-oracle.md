@@ -1,6 +1,6 @@
 ---
-title: "Why I Built Oracle"
-description: "Every journaling app asks you to pour out your soul — then stores it on someone else's server. I built Oracle because I needed a journal that was actually safe."
+title: "Why I Built Oreia"
+description: "Every journaling app asks you to pour out your soul — then stores it on someone else's server. I built Oreia because I needed a journal that was actually safe."
 date: 2026-03-07
 category: Company
 readingTime: 6
@@ -16,7 +16,7 @@ That's not privacy. That's a liability.
 
 ## The Breaking Point
 
-The moment Oracle became inevitable was when I read a privacy policy for a popular journaling app. Buried deep in the legal language was a clause that essentially said: *"We may use your content to improve our services and train our models."*
+The moment Oreia became inevitable was when I read a privacy policy for a popular journaling app. Buried deep in the legal language was a clause that essentially said: *"We may use your content to improve our services and train our models."*
 
 They were training AI on people's journal entries.
 
@@ -38,13 +38,13 @@ It turns out that when you make privacy the *architecture* instead of a *feature
 
 Most AI journaling apps work like this: you write an entry, it gets sent to OpenAI or Google, their servers process it, and a response comes back. Your most private thoughts traverse the internet, land on third-party infrastructure, and get processed by models you can't audit.
 
-Oracle works differently. The AI — a fine-tuned Llama 3.2 model — runs on your machine through Ollama. Your entry is read in local memory, analyzed in local memory, and the insight is generated in local memory. Nothing leaves. There's no API call. No cloud. Just you and your CPU.
+Oreia works differently. The AI — a fine-tuned Llama 3.2 model — runs on your machine through Ollama. Your entry is read in local memory, analyzed in local memory, and the insight is generated in local memory. Nothing leaves. There's no API call. No cloud. Just you and your CPU.
 
 The AI is trained in Cognitive Behavioral Therapy (CBT) and Jungian archetypal psychology. It doesn't give you medical advice. Instead, it asks probing questions to help you uncover patterns you might not see yourself. It's like having a thoughtful friend who's read a lot of Jung and knows when to ask *"What do you think that dream was really about?"*
 
 ## The Collective Without the Compromise
 
-The most ambitious part of Oracle is what we call the "State of the Soul" — a collective map of human emotion and behavior. The question was: *Can we learn from millions of people without knowing anything about any individual?*
+The most ambitious part of Oreia is what we call the "State of the Soul" — a collective map of human emotion and behavior. The question was: *Can we learn from millions of people without knowing anything about any individual?*
 
 The answer is yes, through three layers of mathematical privacy:
 
@@ -54,16 +54,16 @@ The answer is yes, through three layers of mathematical privacy:
 
 The result is a "Multidimensional Wellness Compass" that can map trends across the collective human experience — *without ever identifying a single person.*
 
-## What Oracle Is Really About
+## What Oreia Is Really About
 
-Oracle isn't a product built to capture a market. It's a journal built because I needed one that respected the weight of what I was writing.
+Oreia isn't a product built to capture a market. It's a journal built because I needed one that respected the weight of what I was writing.
 
 When you sit down to write about your shadow, your fears, your grief — you deserve to know that those words exist for you and you alone. Not for an algorithm. Not for an ad targeting system. Not for a model training pipeline.
 
 You deserve a sanctuary.
 
-That's what Oracle is.
+That's what Oreia is.
 
 ---
 
-*If any of this resonates, [Oracle is free to try](https://app.oraclethejournal.com). No credit card. No data collection. Just you and your thoughts, cryptographically sealed.*
+*If any of this resonates, [Oreia is free to try](https://app.oreiathejournal.com). No credit card. No data collection. Just you and your thoughts, cryptographically sealed.*

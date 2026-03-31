@@ -1,5 +1,5 @@
 /* ============================
-   ORACLE BLOG STYLES
+   OREIA BLOG STYLES
    ============================ */
 
 /* ============ BLOG — LIGHT THEME ============
@@ -223,7 +223,7 @@ body.blog-light .footer a:hover { color: #1A1A1A; }
 .blog-card:hover {
   background: var(--bg-card-hover);
   border-color: var(--border-glow);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(212, 167, 106, 0.05);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(124, 156, 245, 0.05);
 }
 
 .blog-card-inner {
@@ -240,8 +240,8 @@ body.blog-light .footer a:hover { color: #1A1A1A; }
   padding: 4px 10px;
   border-radius: 100px;
   background: var(--gradient-accent-soft);
-  color: var(--coral);
-  border: 1px solid rgba(232, 131, 93, 0.12);
+  color: var(--purple);
+  border: 1px solid rgba(167, 139, 250, 0.12);
   margin-bottom: 16px;
 }
 
@@ -257,7 +257,7 @@ body.blog-light .footer a:hover { color: #1A1A1A; }
 }
 
 .blog-card:hover h3 {
-  color: var(--gold-light);
+  color: var(--blue-light);
 }
 
 .blog-card p {
@@ -355,7 +355,7 @@ body.blog-light .footer a:hover { color: #1A1A1A; }
 }
 
 .blog-affiliate-notice a {
-  color: var(--coral);
+  color: var(--purple);
   text-decoration: none;
 }
 
@@ -401,19 +401,19 @@ body.blog-light .footer a:hover { color: #1A1A1A; }
 }
 
 .blog-article-body em {
-  color: var(--coral-light);
+  color: var(--purple-light);
 }
 
 .blog-article-body a {
-  color: var(--coral);
+  color: var(--purple);
   text-decoration: underline;
-  text-decoration-color: rgba(232, 131, 93, 0.3);
+  text-decoration-color: rgba(167, 139, 250, 0.3);
   text-underline-offset: 3px;
   transition: text-decoration-color 0.2s;
 }
 
 .blog-article-body a:hover {
-  text-decoration-color: var(--coral);
+  text-decoration-color: var(--purple);
 }
 
 .blog-article-body ul, .blog-article-body ol {
@@ -429,10 +429,10 @@ body.blog-light .footer a:hover { color: #1A1A1A; }
 }
 
 .blog-article-body blockquote {
-  border-left: 3px solid var(--coral);
+  border-left: 3px solid var(--purple);
   margin: 28px 0;
   padding: 16px 24px;
-  background: rgba(232, 131, 93, 0.04);
+  background: rgba(167, 139, 250, 0.04);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 
@@ -463,7 +463,7 @@ body.blog-light .footer a:hover { color: #1A1A1A; }
   background: rgba(255, 255, 255, 0.06);
   padding: 2px 8px;
   border-radius: 4px;
-  color: var(--gold);
+  color: var(--blue);
 }
 
 .blog-article-body pre {
@@ -501,7 +501,7 @@ body.blog-light .footer a:hover { color: #1A1A1A; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(232, 131, 93, 0.05), transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(167, 139, 250, 0.05), transparent 70%);
   pointer-events: none;
 }
 
@@ -542,7 +542,7 @@ body.blog-light .footer a:hover { color: #1A1A1A; }
 }
 
 .blog-newsletter-input:focus {
-  border-color: var(--coral);
+  border-color: var(--purple);
 }
 
 .blog-newsletter-input::placeholder {
@@ -640,7 +640,7 @@ body.blog-light .footer a:hover { color: #1A1A1A; }
   padding: 9px 20px;
 }
 
-/* Why Oracle differentiation block */
+/* Why Oreia differentiation block */
 
 .blog-why-oracle {
   background: var(--bg-card);
@@ -705,7 +705,7 @@ body.blog-light .footer a:hover { color: #1A1A1A; }
   height: 56px;
   object-fit: contain;
   margin-bottom: 16px;
-  filter: drop-shadow(0 0 12px rgba(212, 167, 106, 0.2));
+  filter: drop-shadow(0 0 12px rgba(124, 156, 245, 0.2));
 }
 
 .blog-cta-box h3 {

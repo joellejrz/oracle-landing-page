@@ -100,10 +100,10 @@ If this resonates, here are the resources I'd recommend:
 
 The deepest shadow work happens in writing. When you type or write without censoring — when you let the ugly, unsorted truth pour out — you give your unconscious a voice.
 
-That's why Oracle's Higher Self feature is designed specifically for this kind of work. The AI doesn't judge. It doesn't diagnose. It asks the questions your ego would prefer to avoid: *"You mentioned feeling invisible. When was the first time you felt that way?"*
+That's why Oreia's Higher Self feature is designed specifically for this kind of work. The AI doesn't judge. It doesn't diagnose. It asks the questions your ego would prefer to avoid: *"You mentioned feeling invisible. When was the first time you felt that way?"*
 
 And because everything runs locally on your device, you can be as brutally honest as you need to be. No one is watching. No one is storing your confessions on a server. It's just you and the shadow, finally in dialogue.
 
 ---
 
-*Shadow work is uncomfortable. It's also the most freeing thing you'll ever do. If you're ready to start, [Oracle is a safe space to begin](https://app.oraclethejournal.com).*
+*Shadow work is uncomfortable. It's also the most freeing thing you'll ever do. If you're ready to start, [Oreia is a safe space to begin](https://app.oreiathejournal.com).*

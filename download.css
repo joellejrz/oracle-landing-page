@@ -1,5 +1,5 @@
 /* ============================
-   ORACLE DOWNLOAD PAGE
+   OREIA DOWNLOAD PAGE
    ============================ */
 
 /* ============ HERO ============ */
@@ -123,7 +123,7 @@
 .dl-card:hover {
   background: var(--bg-card-hover);
   border-color: var(--border-glow);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(212, 167, 106, 0.05);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(124, 156, 245, 0.05);
 }
 
 .dl-card-icon {
@@ -135,7 +135,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
-  color: var(--coral);
+  color: var(--purple);
   transition: transform 0.5s var(--spring);
 }
 
@@ -232,7 +232,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: var(--coral);
+  color: var(--purple);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
@@ -241,7 +241,7 @@
 
 .dl-web-fallback a:hover {
   gap: 10px;
-  color: var(--gold-light);
+  color: var(--blue-light);
 }
 
 /* ============ WHY DESKTOP ============ */
@@ -270,7 +270,7 @@
 .dl-why-card:hover {
   background: var(--bg-card-hover);
   border-color: var(--border-glow);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 30px rgba(212, 167, 106, 0.04);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 30px rgba(124, 156, 245, 0.04);
 }
 
 .dl-why-icon {
@@ -282,7 +282,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  color: var(--coral);
+  color: var(--purple);
   transition: transform 0.5s var(--spring);
 }
 
@@ -449,7 +449,7 @@
 }
 
 .dl-partial {
-  color: var(--gold);
+  color: var(--blue);
   font-weight: 700;
   font-size: 1rem;
 }

@@ -3,8 +3,8 @@ const path = require('path');
 const matter = require('gray-matter');
 const { marked } = require('marked');
 
-const BASE_URL = 'https://oraclethejournal.com';
-const SITE_NAME = 'Oracle The Journal';
+const BASE_URL = 'https://oreiathejournal.com';
+const SITE_NAME = 'Oreia The Journal';
 const POSTS_DIR = path.join(__dirname, 'content', 'posts');
 const BLOG_DIR = path.join(__dirname, 'blog');
 const ROBOTS_PATH = path.join(__dirname, 'robots.txt');
@@ -93,7 +93,7 @@ function postTemplate(post, allPosts) {
   const related = allPosts
     .filter(p => p.slug !== post.slug && p.category === post.category)
     .slice(0, 2);
-  const pageTitle = `${post.title} — Oracle Blog`;
+  const pageTitle = `${post.title} — Oreia Blog`;
   const canonicalPath = `/blog/${post.slug}/`;
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -156,15 +156,15 @@ function postTemplate(post, allPosts) {
   <nav class="nav scrolled">
     <div class="nav-inner">
       <a href="/" class="nav-brand">
-        <img src="/assets/logo.png" alt="Oracle" class="nav-logo">
-        <span class="nav-name">Oracle</span>
+        <img src="/assets/logo.png" alt="Oreia" class="nav-logo">
+        <span class="nav-name">Oreia</span>
       </a>
       <div class="nav-links">
         <a href="/">Home</a>
         <a href="/blog/" class="nav-active">Blog</a>
         <a href="/resources.html">Resources</a>
         <a href="/download.html">Desktop</a>
-        <a href="https://app.oraclethejournal.com" class="btn btn-sm" target="_blank" rel="noopener">Start Free</a>
+        <a href="https://app.oreiathejournal.com" class="btn btn-sm" target="_blank" rel="noopener">Start Free</a>
       </div>
       <button class="nav-toggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -177,7 +177,7 @@ function postTemplate(post, allPosts) {
     <a href="/blog/">Blog</a>
     <a href="/resources.html">Resources</a>
     <a href="/download.html">Desktop App</a>
-    <a href="https://app.oraclethejournal.com" class="btn" target="_blank" rel="noopener">Start Free</a>
+    <a href="https://app.oreiathejournal.com" class="btn" target="_blank" rel="noopener">Start Free</a>
   </div>
 
   <main class="legal-page">
@@ -221,10 +221,10 @@ function postTemplate(post, allPosts) {
       <div class="blog-cta-box">
         <img src="/assets/logo.png" alt="" class="blog-cta-logo" aria-hidden="true">
         <h3>Ready to start your inner work?</h3>
-        <p>Oracle combines CBT, Jungian archetypes, and local AI into a private journal that never leaves your device.</p>
+        <p>Oreia combines CBT, Jungian archetypes, and local AI into a private journal that never leaves your device.</p>
         <a href="/download.html" class="btn btn-primary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download Oracle
+          Download Oreia
         </a>
       </div>
 
@@ -234,7 +234,7 @@ function postTemplate(post, allPosts) {
   <footer class="footer">
     <div class="section-container">
       <div class="footer-bottom">
-        <p>&copy; 2026 Oracle The Journal. All rights reserved.</p>
+        <p>&copy; 2026 Oreia The Journal. All rights reserved.</p>
         <p class="footer-privacy-note">We collect zero personal data. <a href="/encryption.html">Verify our claims.</a></p>
       </div>
     </div>
@@ -247,8 +247,8 @@ function postTemplate(post, allPosts) {
 
 function indexTemplate(posts) {
   const categories = ['All', ...new Set(posts.map(p => p.category))];
-  const pageTitle = 'Blog — Oracle The Journal';
-  const description = 'Insights on shadow work, dream interpretation, Jungian psychology, and building a private AI journal. By Oracle.';
+  const pageTitle = 'Blog — Oreia The Journal';
+  const description = 'Insights on shadow work, dream interpretation, Jungian psychology, and building a private AI journal. By Oreia.';
   const blogSchema = {
     '@context': 'https://schema.org',
     '@type': 'Blog',
@@ -305,15 +305,15 @@ function indexTemplate(posts) {
   <nav class="nav scrolled">
     <div class="nav-inner">
       <a href="/" class="nav-brand">
-        <img src="/assets/logo.png" alt="Oracle" class="nav-logo">
-        <span class="nav-name">Oracle</span>
+        <img src="/assets/logo.png" alt="Oreia" class="nav-logo">
+        <span class="nav-name">Oreia</span>
       </a>
       <div class="nav-links">
         <a href="/">Home</a>
         <a href="/blog/" class="nav-active">Blog</a>
         <a href="/resources.html">Resources</a>
         <a href="/download.html">Desktop</a>
-        <a href="https://app.oraclethejournal.com" class="btn btn-sm" target="_blank" rel="noopener">Start Free</a>
+        <a href="https://app.oreiathejournal.com" class="btn btn-sm" target="_blank" rel="noopener">Start Free</a>
       </div>
       <button class="nav-toggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -326,7 +326,7 @@ function indexTemplate(posts) {
     <a href="/blog/">Blog</a>
     <a href="/resources.html">Resources</a>
     <a href="/download.html">Desktop App</a>
-    <a href="https://app.oraclethejournal.com" class="btn" target="_blank" rel="noopener">Start Free</a>
+    <a href="https://app.oreiathejournal.com" class="btn" target="_blank" rel="noopener">Start Free</a>
   </div>
 
   <main class="blog-page">
@@ -334,7 +334,7 @@ function indexTemplate(posts) {
 
       <div class="blog-hero">
         <span class="section-tag">From the Vault</span>
-        <h1>A Blog by <span class="gradient-text">Oracle.</span></h1>
+        <h1>A Blog by <span class="gradient-text">Oreia.</span></h1>
         <p class="blog-hero-sub">Shadow work, dream interpretation, Jungian psychology, and the architecture of privacy. Insights from the unconscious.</p>
       </div>
 
@@ -364,7 +364,7 @@ function indexTemplate(posts) {
   <footer class="footer">
     <div class="section-container">
       <div class="footer-bottom">
-        <p>&copy; 2026 Oracle The Journal. All rights reserved.</p>
+        <p>&copy; 2026 Oreia The Journal. All rights reserved.</p>
         <p class="footer-privacy-note">We collect zero personal data. <a href="/encryption.html">Verify our claims.</a></p>
       </div>
     </div>
