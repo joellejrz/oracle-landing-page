@@ -9,6 +9,10 @@ const POSTS_DIR = path.join(__dirname, 'content', 'posts');
 const BLOG_DIR = path.join(__dirname, 'blog');
 const ROBOTS_PATH = path.join(__dirname, 'robots.txt');
 const SITEMAP_PATH = path.join(__dirname, 'sitemap.xml');
+const REDIRECTS_PATH = path.join(__dirname, '_redirects');
+const COMING_SOON_CONFIG_PATH = path.join(__dirname, 'coming-soon.config.json');
+const INDEX_MARKETING_PATH = path.join(__dirname, 'index-marketing.html');
+const COMING_SOON_PAGE_PATH = path.join(__dirname, 'coming-soon.html');
 
 marked.setOptions({
   gfm: true,
@@ -395,7 +399,23 @@ Sitemap: ${absoluteUrl('/sitemap.xml')}
 `;
 }
 
-function generateSitemap(posts) {
+function generateSitemap(posts, comingSoonMode) {
+  if (comingSoonMode) {
+    const urls = [{ loc: absoluteUrl('/'), lastmod: new Date().toISOString() }]
+      .map(
+        ({ loc, lastmod }) => `  <url>
+    <loc>${loc}</loc>
+    <lastmod>${lastmod}</lastmod>
+  </url>`
+      )
+      .join('\n');
+    return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls}
+</urlset>
+`;
+  }
+
   const staticPages = [
     { loc: absoluteUrl('/'), lastmod: new Date().toISOString() },
     { loc: absoluteUrl('/blog/'), lastmod: new Date().toISOString() },
@@ -428,6 +448,58 @@ ${urls}
 `;
 }
 
+function readComingSoonMode() {
+  try {
+    const raw = fs.readFileSync(COMING_SOON_CONFIG_PATH, 'utf-8');
+    const data = JSON.parse(raw);
+    return data.enabled === true;
+  } catch {
+    return false;
+  }
+}
+
+function writeProductionRedirects(enabled) {
+  if (!enabled) {
+    if (fs.existsSync(REDIRECTS_PATH)) {
+      fs.unlinkSync(REDIRECTS_PATH);
+      console.log('  -> _redirects (removed — full site mode)');
+    }
+    return;
+  }
+  const lines = [
+    '# Coming soon: send visitors to homepage (assets and CSS/JS are not matched)',
+    '/download.html / 302',
+    '/resources.html / 302',
+    '/encryption.html / 302',
+    '/terms.html / 302',
+    '/privacy.html / 302',
+    '/coming-soon.html / 302',
+    '/blog / 302',
+    '/blog/ / 302',
+    '/blog/* / 302',
+  ];
+  fs.writeFileSync(REDIRECTS_PATH, `${lines.join('\n')}\n`);
+  console.log('  -> _redirects (coming soon — hidden routes redirect to /)');
+}
+
+function applyLandingPage(comingSoonMode) {
+  if (comingSoonMode) {
+    if (!fs.existsSync(COMING_SOON_PAGE_PATH)) {
+      console.warn('coming-soon.html missing; skipping homepage swap');
+      return;
+    }
+    fs.copyFileSync(COMING_SOON_PAGE_PATH, path.join(__dirname, 'index.html'));
+    console.log('  -> index.html (from coming-soon.html — coming soon mode)');
+    return;
+  }
+  if (!fs.existsSync(INDEX_MARKETING_PATH)) {
+    console.warn('index-marketing.html missing; keeping existing index.html');
+    return;
+  }
+  fs.copyFileSync(INDEX_MARKETING_PATH, path.join(__dirname, 'index.html'));
+  console.log('  -> index.html (from index-marketing.html — full site mode)');
+}
+
 // Build
 console.log('Building blog...');
 const posts = readAllPosts();
@@ -451,9 +523,13 @@ fs.writeFileSync(path.join(BLOG_DIR, 'index.html'), indexTemplate(posts));
 console.log('  -> blog/index.html');
 
 // Generate technical SEO files
+const comingSoonMode = readComingSoonMode();
 fs.writeFileSync(ROBOTS_PATH, generateRobots());
 console.log('  -> robots.txt');
-fs.writeFileSync(SITEMAP_PATH, generateSitemap(posts));
-console.log('  -> sitemap.xml');
+fs.writeFileSync(SITEMAP_PATH, generateSitemap(posts, comingSoonMode));
+console.log(`  -> sitemap.xml (${comingSoonMode ? 'coming soon: / only' : 'full site'})`);
 
-console.log('Blog build complete!');
+applyLandingPage(comingSoonMode);
+writeProductionRedirects(comingSoonMode);
+
+console.log(`Blog build complete! Mode: ${comingSoonMode ? 'COMING SOON (marketing pages stay in repo, not linked)' : 'FULL SITE'}`);

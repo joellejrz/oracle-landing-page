@@ -1,0 +1,4 @@
+{
+  "enabled": true,
+  "_launch": "Set enabled to false, run npm run build, then deploy — publishes index-marketing.html as homepage and removes _redirects."
+}

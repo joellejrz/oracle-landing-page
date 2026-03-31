@@ -1,0 +1,10 @@
+# Coming soon: send visitors to homepage (assets and CSS/JS are not matched)
+/download.html / 302
+/resources.html / 302
+/encryption.html / 302
+/terms.html / 302
+/privacy.html / 302
+/coming-soon.html / 302
+/blog / 302
+/blog/ / 302
+/blog/* / 302
